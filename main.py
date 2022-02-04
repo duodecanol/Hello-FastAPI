@@ -34,3 +34,7 @@ async def get_model(model_name: ModelName): # Typing을 해주면 Enum 사용 �
         return {"model_name": model_name, "message": "LeCNN all the images"}
 
     return {"model_name": model_name, "message": "Have some residuals"}
+
+@app.get("/files/{file_path:path}")
+async def read_file(file_path: str):
+    return {"file_path": file_path}
