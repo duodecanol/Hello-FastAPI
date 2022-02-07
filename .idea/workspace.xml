@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee682cf1-9266-4c62-bbfd-11c825ff8c22" name="Changes" comment="part-01-hello world&#10;&#10;https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-1-hello-world/">
-      <change afterPath="$PROJECT_DIR$/part-02-path-parameters/app/main.py" afterDir="false" />
+    <list default="true" id="ee682cf1-9266-4c62-bbfd-11c825ff8c22" name="Changes" comment="part-02-path-parameters #1&#10;&#10;https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-2-url-path-parameters/">
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part-03-query-parameters/app/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,9 +28,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.main (2)">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hwal\Documents\python_projects\fastAPIHello" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main (3)">
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="fastAPIHello" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -74,6 +81,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="fastAPIHello" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/part-03-query-parameters/app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/part-03-query-parameters/app/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="fastAPIHello" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -98,6 +127,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main (3)" />
         <item itemvalue="Python.main (2)" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.main" />
@@ -116,7 +146,7 @@
       <workItem from="1643988590433" duration="59000" />
       <workItem from="1643988659326" duration="3094000" />
       <workItem from="1644032845783" duration="1341000" />
-      <workItem from="1644199537464" duration="1080000" />
+      <workItem from="1644199537464" duration="1771000" />
     </task>
     <task id="LOCAL-00001" summary="part-01-hello world&#10;&#10;https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-1-hello-world/">
       <created>1644200138950</created>
@@ -125,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644200138950</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="part-02-path-parameters #1&#10;&#10;https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-2-url-path-parameters/">
+      <created>1644200713583</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1644200713583</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,11 +181,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="part-01-hello world&#10;&#10;https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-1-hello-world/" />
-    <option name="LAST_COMMIT_MESSAGE" value="part-01-hello world&#10;&#10;https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-1-hello-world/" />
+    <MESSAGE value="part-02-path-parameters #1&#10;&#10;https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-2-url-path-parameters/" />
+    <option name="LAST_COMMIT_MESSAGE" value="part-02-path-parameters #1&#10;&#10;https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-2-url-path-parameters/" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fastAPIHello$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1644199934042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part-01-hello-world/app" />
     <SUITE FILE_PATH="coverage/fastAPIHello$main.coverage" NAME="main Coverage Results" MODIFIED="1644032978458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fastAPIHello$main__3_.coverage" NAME="main (3) Coverage Results" MODIFIED="1644201095438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part-03-query-parameters/app" />
     <SUITE FILE_PATH="coverage/fastAPIHello$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1644200620678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part-02-path-parameters/app" />
   </component>
 </project>
