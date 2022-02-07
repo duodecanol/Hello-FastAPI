@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee682cf1-9266-4c62-bbfd-11c825ff8c22" name="Changes" comment="part-05-error-handling&#10;&#10;https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-5-basic-error-handling/">
-      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/templates/index.html" afterDir="false" />
+    <list default="true" id="ee682cf1-9266-4c62-bbfd-11c825ff8c22" name="Changes" comment="part-06-jinja-templates">
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/db/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/db/base_class.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/models/recipe.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/models/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +30,6 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
@@ -169,7 +172,8 @@
       <workItem from="1643988590433" duration="59000" />
       <workItem from="1643988659326" duration="3094000" />
       <workItem from="1644032845783" duration="1341000" />
-      <workItem from="1644199537464" duration="5090000" />
+      <workItem from="1644199537464" duration="7132000" />
+      <workItem from="1644208516829" duration="445000" />
     </task>
     <task id="LOCAL-00001" summary="part-01-hello world&#10;&#10;https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-1-hello-world/">
       <created>1644200138950</created>
@@ -206,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644204357261</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="part-06-jinja-templates">
+      <created>1644205975281</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1644205975281</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +240,8 @@
     <MESSAGE value="part-03-query-parameters&#10;&#10;https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-3-query-parameters/" />
     <MESSAGE value="part-04-pydantic-schemas&#10;&#10;https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-4-pydantic-schemas/" />
     <MESSAGE value="part-05-error-handling&#10;&#10;https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-5-basic-error-handling/" />
-    <option name="LAST_COMMIT_MESSAGE" value="part-05-error-handling&#10;&#10;https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-5-basic-error-handling/" />
+    <MESSAGE value="part-06-jinja-templates" />
+    <option name="LAST_COMMIT_MESSAGE" value="part-06-jinja-templates" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fastAPIHello$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1644199934042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part-01-hello-world/app" />
