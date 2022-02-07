@@ -1,9 +1,14 @@
-from typing import Optional
+from typing import Optional, Any
+from pathlib import Path
 
-from fastapi import FastAPI, APIRouter, HTTPException, Query
+from fastapi import FastAPI, APIRouter, HTTPException, Query, Request
+from fastapi.templating import Jinja2Templates
 
 from recipe_data import RECIPES
 from schemas import Recipe, RecipeCreate, RecipeSearchResults
+
+BASE_PATH = Path(__file__).resolve().parent
+TEMPLATES = Jinja2Templates(directory=str(BASE_PATH / "templates"))
 
 app = FastAPI(
     title="Recipe API", openapi_url="/openapi.json"
@@ -13,12 +18,15 @@ api_router = APIRouter()
 
 
 @api_router.get("/", status_code=200)
-def root() -> dict:
+def root(request: Request):
     """
     Root Get
     :return:
     """
-    return {"msg": "Hello World!"}
+    return TEMPLATES.TemplateResponse(
+        "index.html",
+        {"request": request, "recipes": RECIPES}
+    )
 
 
 @api_router.get("/recipe/{recipe_id}", status_code=200)
