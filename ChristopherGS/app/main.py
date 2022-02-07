@@ -29,10 +29,11 @@ def fetch_recipe(*, recipe_id: int) -> dict:
     :return:
     """
     result = [recipe for recipe in RECIPES if recipe["id"] == recipe_id]
-    if result:
-        return result[0]
-    else:
-        raise HTTPException(status_code=404, detail="Item not found")
+    if not result:
+        raise HTTPException(status_code=404, detail=f"Recipe with ID {recipe_id}  not found")
+    return result[0]
+
+
 
 
 @api_router.get("/search/", status_code=200, response_model=RecipeSearchResults)
