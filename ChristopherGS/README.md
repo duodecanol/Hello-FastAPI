@@ -32,3 +32,16 @@ alembic upgrade head
 # Create initial data in DB
 python ./app/initial_data.py
 ```
+
+## sqlite3 no such table
+
+경로문제
+
+https://stackoverflow.com/questions/29397002/creating-database-with-sqlalchemy-in-flask
+
+```python
+db_path = os.path.join(os.path.dirname(__file__), 'app.db')
+db_uri = 'sqlite:///{}'.format(db_path)
+```
+
+
