@@ -1,4 +1,6 @@
 from typing import Optional, Any
+import httpx
+import asyncio
 
 from fastapi import APIRouter, HTTPException, Query, Depends
 from sqlalchemy.orm import Session
@@ -57,3 +59,61 @@ def create_recipe(*, recipe_in: RecipeCreate, db: Session = Depends(deps.get_db)
     """
     recipe = crud.recipe.create(db=db, obj_in=recipe_in)
     return recipe
+
+def get_reddit_top(subreddit: str, data: dict) -> None:
+    response = httpx.get(
+        f"https://www.reddit.com/r/{subreddit}/top.json?sort=top&t=day&limit=5",
+        headers={"User-agent": "recipe bot 0.1"},
+    )
+    subreddit_recipes = response.json()
+    # print("==================================")
+    # print(subreddit_recipes)
+    subreddit_data = []
+    for entry in subreddit_recipes["data"]["children"]:
+        score = entry["data"]["score"]
+        title = entry["data"]["title"]
+        link = entry["data"]["url"]
+        subreddit_data.append(f"{str(score)}: {title} ({link})")
+    data[subreddit] = subreddit_data
+
+@router.get("/ideas/")
+def fetch_ideas() -> dict:
+    data: dict = {}
+    get_reddit_top("recipes", data)
+    get_reddit_top("easyrecipes", data)
+    get_reddit_top("TopSecretRecipes", data)
+    get_reddit_top("VegRecipes", data)
+    get_reddit_top("cookingforbeginners", data)
+    get_reddit_top("FoodPorn", data)
+
+    return data
+
+async def get_reddit_top_async(subreddit: str, data: dict) -> None:
+    async with httpx.AsyncClient() as client:
+        response = await client.get(
+            f"https://www.reddit.com/r/{subreddit}/top.json?sort=top&t=day&limit=5",
+            headers={"User-agent": "recipe bot 0.1"},
+        )
+    subreddit_recipes = response.json()
+    subreddit_data = []
+    for entry in subreddit_recipes["data"]["children"]:
+        score = entry["data"]["score"]
+        title = entry["data"]["title"]
+        link = entry["data"]["url"]
+        subreddit_data.append(f"{str(score)}: {title} ({link})")
+    data[subreddit] = subreddit_data
+
+@router.get("/ideas/async")
+async def fetch_ideas_async() -> dict:
+    data: dict = {}
+
+    await asyncio.gather(
+        get_reddit_top_async("recipes", data),
+        get_reddit_top_async("easyrecipes", data),
+        get_reddit_top_async("TopSecretRecipes", data),
+        get_reddit_top_async("VegRecipes", data),
+        get_reddit_top_async("cookingforbeginners", data),
+        get_reddit_top_async("FoodPorn", data),
+    )
+
+    return data

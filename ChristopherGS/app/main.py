@@ -1,4 +1,5 @@
 from pathlib import Path
+import time
 
 from fastapi import FastAPI, APIRouter, Request, Depends
 from fastapi.templating import Jinja2Templates
@@ -33,6 +34,21 @@ def root(
         "index.html",
         {"request": request, "recipes": recipes}
     )
+
+@app.middleware("http")
+async def add_process_time_header(request: Request, call_next):
+    """
+    Middleware to measure processing time for an api request.
+    `X-Process-Time` indicates time elapsed for the request will be added to every response header
+    :param request:
+    :param call_next:
+    :return:
+    """
+    start_time = time.time()
+    response = await call_next(request)
+    process_time = time.time() - start_time
+    response.headers["X-Process-Time"] = str(process_time)
+    return response
 
 
 app.include_router(api_router, prefix=settings.API_V1_STR)

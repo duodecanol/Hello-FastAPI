@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee682cf1-9266-4c62-bbfd-11c825ff8c22" name="Changes" comment="part-08-structure-and-versioning [Config]">
-      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/api/api_v1/api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/api/api_v1/endpoints/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/api/api_v1/endpoints/recipe.py" afterDir="false" />
+    <list default="true" id="ee682cf1-9266-4c62-bbfd-11c825ff8c22" name="Changes" comment="part-08-structure-and-versioning [API versioning]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/api/api_v1/endpoints/recipe.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/api/api_v1/endpoints/recipe.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChristopherGS/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +49,9 @@
       <recent name="C:\Users\hwal\Documents\python_projects\fastAPIHello\ChristopherGS\app\api\api_v1" />
       <recent name="C:\Users\hwal\Documents\python_projects\fastAPIHello\ChristopherGS\app\api" />
       <recent name="C:\Users\hwal\Documents\python_projects\fastAPIHello" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hwal\Documents\python_projects\fastAPIHello\ChristopherGS\app\api" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main (4)">
@@ -163,7 +164,8 @@
       <workItem from="1644032845783" duration="1341000" />
       <workItem from="1644199537464" duration="7132000" />
       <workItem from="1644208516829" duration="10949000" />
-      <workItem from="1644224622229" duration="7779000" />
+      <workItem from="1644224622229" duration="8640000" />
+      <workItem from="1644246914432" duration="1265000" />
     </task>
     <task id="LOCAL-00001" summary="part-01-hello world&#10;&#10;https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-1-hello-world/">
       <created>1644200138950</created>
@@ -249,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644230850820</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="part-08-structure-and-versioning [API versioning]">
+      <created>1644233323851</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1644233323851</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,13 +287,14 @@
     <MESSAGE value="part-07-database [3/3]" />
     <MESSAGE value="part-07-database [4/4]" />
     <MESSAGE value="part-08-structure-and-versioning [Config]" />
-    <option name="LAST_COMMIT_MESSAGE" value="part-08-structure-and-versioning [Config]" />
+    <MESSAGE value="part-08-structure-and-versioning [API versioning]" />
+    <option name="LAST_COMMIT_MESSAGE" value="part-08-structure-and-versioning [API versioning]" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fastAPIHello$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1644199934042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part-01-hello-world/app" />
     <SUITE FILE_PATH="coverage/fastAPIHello$main.coverage" NAME="main Coverage Results" MODIFIED="1644032978458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/fastAPIHello$main__3_.coverage" NAME="main (3) Coverage Results" MODIFIED="1644201095438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part-03-query-parameters/app" />
-    <SUITE FILE_PATH="coverage/fastAPIHello$main__4_.coverage" NAME="main (4) Coverage Results" MODIFIED="1644229372835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ChristopherGS/app" />
+    <SUITE FILE_PATH="coverage/fastAPIHello$main__4_.coverage" NAME="main (4) Coverage Results" MODIFIED="1644247779608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ChristopherGS/app" />
     <SUITE FILE_PATH="coverage/fastAPIHello$backend_pre_start.coverage" NAME="backend_pre_start Coverage Results" MODIFIED="1644223250058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ChristopherGS/app" />
     <SUITE FILE_PATH="coverage/fastAPIHello$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1644200620678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part-02-path-parameters/app" />
     <SUITE FILE_PATH="coverage/fastAPIHello$session.coverage" NAME="session Coverage Results" MODIFIED="1644229351173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ChristopherGS/app/db" />
