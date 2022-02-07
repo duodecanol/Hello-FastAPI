@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee682cf1-9266-4c62-bbfd-11c825ff8c22" name="Changes" comment="part-07-database [4/4]">
-      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/api/api_v1/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/core/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/core/config.py" afterDir="false" />
+    <list default="true" id="ee682cf1-9266-4c62-bbfd-11c825ff8c22" name="Changes" comment="part-08-structure-and-versioning [Config]">
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/api/api_v1/api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/api/api_v1/endpoints/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/api/api_v1/endpoints/recipe.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChristopherGS/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +40,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ChristopherGS/app/core" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ChristopherGS/app/api/api_v1/endpoints" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hwal\Documents\python_projects\fastAPIHello\ChristopherGS\app\api\api_v1\endpoints" />
       <recent name="C:\Users\hwal\Documents\python_projects\fastAPIHello\ChristopherGS\app\core" />
       <recent name="C:\Users\hwal\Documents\python_projects\fastAPIHello\ChristopherGS\app\api\api_v1" />
       <recent name="C:\Users\hwal\Documents\python_projects\fastAPIHello\ChristopherGS\app\api" />
@@ -163,7 +163,7 @@
       <workItem from="1644032845783" duration="1341000" />
       <workItem from="1644199537464" duration="7132000" />
       <workItem from="1644208516829" duration="10949000" />
-      <workItem from="1644224622229" duration="5863000" />
+      <workItem from="1644224622229" duration="7779000" />
     </task>
     <task id="LOCAL-00001" summary="part-01-hello world&#10;&#10;https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-1-hello-world/">
       <created>1644200138950</created>
@@ -242,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644229589808</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="part-08-structure-and-versioning [Config]">
+      <created>1644230850820</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1644230850820</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +277,8 @@
     <MESSAGE value="part-07-database [2/3]" />
     <MESSAGE value="part-07-database [3/3]" />
     <MESSAGE value="part-07-database [4/4]" />
-    <option name="LAST_COMMIT_MESSAGE" value="part-07-database [4/4]" />
+    <MESSAGE value="part-08-structure-and-versioning [Config]" />
+    <option name="LAST_COMMIT_MESSAGE" value="part-08-structure-and-versioning [Config]" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fastAPIHello$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1644199934042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part-01-hello-world/app" />
