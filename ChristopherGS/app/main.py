@@ -5,7 +5,7 @@ from fastapi import FastAPI, APIRouter, HTTPException, Query, Request
 from fastapi.templating import Jinja2Templates
 
 from recipe_data import RECIPES
-from schemas import Recipe, RecipeCreate, RecipeSearchResults
+from app.schemas.recipe import Recipe, RecipeCreate, RecipeSearchResults
 
 BASE_PATH = Path(__file__).resolve().parent
 TEMPLATES = Jinja2Templates(directory=str(BASE_PATH / "templates"))

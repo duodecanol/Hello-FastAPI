@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee682cf1-9266-4c62-bbfd-11c825ff8c22" name="Changes" comment="part-07-database [1/3]">
-      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/crud/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/crud/crud_recipe.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/crud/crud_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/schemas/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/schemas/recipe.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/schemas/user.py" afterDir="false" />
+    <list default="true" id="ee682cf1-9266-4c62-bbfd-11c825ff8c22" name="Changes" comment="part-07-database [2/3]">
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/alembic.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/alembic/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/alembic/env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/alembic/script.py.mako" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/backend_pre_start.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/crud/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/db/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/db/init_db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/initial_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/prestart.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/prestart.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/fastAPIHello.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fastAPIHello.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/schemas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/crud/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/crud/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/crud/crud_recipe.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/crud/crud_recipe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/crud/crud_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/crud/crud_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/db/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/db/session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/models/recipe.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/models/recipe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/schemas/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/schemas/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/schemas/recipe.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/schemas/recipe.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +37,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="24eQP3DTGlj2nDSn8wAUqGWH1jA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -33,37 +62,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hwal\Documents\python_projects\fastAPIHello" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main (4)">
-    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="fastAPIHello" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/part-01-hello-world/app" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/part-01-hello-world/app/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+  <component name="RunManager" selected="PowerShell.prestart.ps1">
+    <configuration name="prestart.ps1" type="PowerShellRunType" factoryName="PowerShell" temporary="true" scriptUrl="$PROJECT_DIR$/ChristopherGS/prestart.ps1" workingDirectory="C:\Users\hwal" executablePath="$PROJECT_DIR$/../../../../../Windows/System32/WindowsPowerShell/v1.0/powershell.exe">
+      <envs />
       <method v="2" />
     </configuration>
-    <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="backend_pre_start" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="fastAPIHello" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -71,12 +83,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/part-02-path-parameters/app" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ChristopherGS/app" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/part-02-path-parameters/app/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ChristopherGS/app/backend_pre_start.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -129,35 +141,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="fastAPIHello" />
+    <configuration name="prestart.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/ChristopherGS/prestart.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/ChristopherGS" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PowerShell.prestart.ps1" />
+        <item itemvalue="Shell Script.prestart.sh" />
+        <item itemvalue="Python.backend_pre_start" />
         <item itemvalue="Python.main (4)" />
         <item itemvalue="Python.main (3)" />
-        <item itemvalue="Python.main (2)" />
-        <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +179,8 @@
       <workItem from="1643988659326" duration="3094000" />
       <workItem from="1644032845783" duration="1341000" />
       <workItem from="1644199537464" duration="7132000" />
-      <workItem from="1644208516829" duration="3286000" />
+      <workItem from="1644208516829" duration="10949000" />
+      <workItem from="1644224622229" duration="1295000" />
     </task>
     <task id="LOCAL-00001" summary="part-01-hello world&#10;&#10;https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-1-hello-world/">
       <created>1644200138950</created>
@@ -225,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644209227552</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="part-07-database [2/3]">
+      <created>1644212852231</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1644212852231</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,13 +263,15 @@
     <MESSAGE value="part-05-error-handling&#10;&#10;https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-5-basic-error-handling/" />
     <MESSAGE value="part-06-jinja-templates" />
     <MESSAGE value="part-07-database [1/3]" />
-    <option name="LAST_COMMIT_MESSAGE" value="part-07-database [1/3]" />
+    <MESSAGE value="part-07-database [2/3]" />
+    <option name="LAST_COMMIT_MESSAGE" value="part-07-database [2/3]" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fastAPIHello$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1644199934042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part-01-hello-world/app" />
     <SUITE FILE_PATH="coverage/fastAPIHello$main.coverage" NAME="main Coverage Results" MODIFIED="1644032978458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/fastAPIHello$main__3_.coverage" NAME="main (3) Coverage Results" MODIFIED="1644201095438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part-03-query-parameters/app" />
-    <SUITE FILE_PATH="coverage/fastAPIHello$main__4_.coverage" NAME="main (4) Coverage Results" MODIFIED="1644203662374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ChristopherGS/app" />
+    <SUITE FILE_PATH="coverage/fastAPIHello$main__4_.coverage" NAME="main (4) Coverage Results" MODIFIED="1644222186647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ChristopherGS/app" />
+    <SUITE FILE_PATH="coverage/fastAPIHello$backend_pre_start.coverage" NAME="backend_pre_start Coverage Results" MODIFIED="1644223250058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ChristopherGS/app" />
     <SUITE FILE_PATH="coverage/fastAPIHello$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1644200620678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part-02-path-parameters/app" />
   </component>
 </project>

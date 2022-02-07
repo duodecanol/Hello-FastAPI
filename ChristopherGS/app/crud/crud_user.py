@@ -2,9 +2,9 @@ from typing import Any, Dict, Optional, Union
 
 from sqlalchemy.orm import Session
 
-from ChristopherGS.app.crud.base import CRUDBase
-from ChristopherGS.app.models.user import User
-from ChristopherGS.app.schemas.user import UserCreate, UserUpdate
+from app.crud.base import CRUDBase
+from app.models.user import User
+from app.schemas.user import UserCreate, UserUpdate
 
 
 class CRUDUser(CRUDBase[User, UserCreate, UserUpdate]):
@@ -21,5 +21,6 @@ class CRUDUser(CRUDBase[User, UserCreate, UserUpdate]):
 
     def is_superuser(self, user: User) -> bool:
         return user.is_superuser
+
 
 user = CRUDUser(User)
