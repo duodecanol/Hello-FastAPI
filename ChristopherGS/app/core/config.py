@@ -2,8 +2,15 @@ from pydantic import AnyHttpUrl, BaseSettings, EmailStr, validator
 from typing import List, Optional, Union
 import os
 
+
 class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
+    JWT_SECRET: str = ""
+    ALGORITHM: str = "HS256"
+
+    # 8 days lasts
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 8
+    
     # BACKEND_CORS_ORIGINS is a JSON-formatted list of origins
     # e.g: '["http://localhost", "http://localhost:4200", "http://localhost:3000", \
     # "http://localhost:8080", "http://local.dockertoolbox.tiangolo.com"]'
@@ -20,8 +27,10 @@ class Settings(BaseSettings):
     DB_PATH = os.path.join(os.path.dirname(__file__), 'example.db')
     SQLALCHEMY_DATABASE_URI = f"sqlite:///{DB_PATH}"
     FIRST_SUPERUSER = EmailStr = "admin@admin.com"
+    FIRST_SUPERUSER_PW = str = "1111"
 
     class Config:
         case_sensitive = True
+
 
 settings = Settings()

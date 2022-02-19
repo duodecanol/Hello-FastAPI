@@ -31,7 +31,7 @@ set PYTHONPATH=%PYTHONPATH%;C:\Users\hwal\Documents\python_projects\fastAPIHello
 python ./app/backend_pre_start.py
 
 # Run migrations
-alembic revision --autogenerate -m "update1" 
+alembic revision --autogenerate -m "jwt-auth-1" 
 alembic upgrade head
 
 

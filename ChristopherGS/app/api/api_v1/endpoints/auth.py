@@ -11,7 +11,7 @@ from app.models.user import User
 router = APIRouter()
 
 
-@router.post("/signup", response_model=schemas.User, status_code=200)
+@router.post("/signup", response_model=schemas.User, status_code=201)
 def create_user_signup(
         *,
         db: Session = Depends(deps.get_db),

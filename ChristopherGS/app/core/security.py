@@ -5,7 +5,7 @@ Passlib is a password hashing library for Python 2 & 3, which provides cross-pla
 """
 
 
-PWD_CONTEXT = CryptContext(schemes=["bcrypt"], deprecate="auto")
+PWD_CONTEXT = CryptContext(schemes=["bcrypt"])
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
     return PWD_CONTEXT.verify(plain_password, hashed_password)

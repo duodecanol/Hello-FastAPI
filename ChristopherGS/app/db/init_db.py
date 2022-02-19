@@ -3,11 +3,10 @@ from sqlalchemy.orm import Session
 
 from app import crud, schemas
 from app.db import base  # noqa
+from app.core.config import settings
 from app.recipe_data import RECIPES
 
 logger = logging.getLogger(__name__)
-
-FIRST_SUPERUSER = "admin@admin.com"
 
 # make sure all SQL Alchemy models are imported (app.db.base) before initializing DB
 # otherwise, SQL Alchemy might fail to initialize relationships properly
@@ -19,19 +18,20 @@ def init_db(db: Session) -> None:
     # But if you don't want to use migrations, create
     # the tables un-commenting the next line
     # Base.metadata.create_all(bind=engine)
-    if FIRST_SUPERUSER:
-        user = crud.user.get_by_email(db, email=FIRST_SUPERUSER)
+    if settings.FIRST_SUPERUSER:
+        user = crud.user.get_by_email(db, email=settings.FIRST_SUPERUSER)
         if not user:
             user_in = schemas.UserCreate(
                 full_name="Initial Super User",
-                email=FIRST_SUPERUSER,
+                email=settings.FIRST_SUPERUSER,
                 is_superuser=True,
+                password=settings.FIRST_SUPERUSER_PW,
             )
             user = crud.user.create(db, obj_in=user_in)
         else:
             logger.warning(
                 "Skipping creating superuser. User with email "
-                f"{FIRST_SUPERUSER} already exists. "
+                f"{settings.FIRST_SUPERUSER} already exists. "
             )
         if not user.recipes:
             for recipe in RECIPES:
