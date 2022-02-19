@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee682cf1-9266-4c62-bbfd-11c825ff8c22" name="Changes" comment="part-10-jwt-auth 1&#10;&#10;Practical Section 1 - Implementing JWT Auth Endpoints - Sign Up Flow">
+    <list default="true" id="ee682cf1-9266-4c62-bbfd-11c825ff8c22" name="Changes" comment="part-10-jwt-auth 1.1&#10;&#10;db update / reconfig init data">
+      <change afterPath="$PROJECT_DIR$/ChristopherGS/app/core/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChristopherGS/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/api/api_v1/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/api/api_v1/api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChristopherGS/app/api/api_v1/endpoints/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/api/api_v1/endpoints/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/api/deps.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/api/deps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChristopherGS/app/core/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/core/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/core/security.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/core/security.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/db/init_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/db/init_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/initial_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/initial_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChristopherGS/app/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChristopherGS/app/models/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChristopherGS/example.db" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +172,7 @@
       <workItem from="1644246914432" duration="1889000" />
       <workItem from="1644311660189" duration="129000" />
       <workItem from="1645240515945" duration="1646000" />
-      <workItem from="1645304193848" duration="3173000" />
+      <workItem from="1645304193848" duration="5758000" />
     </task>
     <task id="LOCAL-00001" summary="part-01-hello world&#10;&#10;https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-1-hello-world/">
       <created>1644200138950</created>
@@ -281,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645306667278</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="part-10-jwt-auth 1.1&#10;&#10;db update / reconfig init data">
+      <created>1645307706004</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1645307706004</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,13 +318,14 @@
     <MESSAGE value="part-08-structure-and-versioning [API versioning]" />
     <MESSAGE value="part-09-async" />
     <MESSAGE value="part-10-jwt-auth 1&#10;&#10;Practical Section 1 - Implementing JWT Auth Endpoints - Sign Up Flow" />
-    <option name="LAST_COMMIT_MESSAGE" value="part-10-jwt-auth 1&#10;&#10;Practical Section 1 - Implementing JWT Auth Endpoints - Sign Up Flow" />
+    <MESSAGE value="part-10-jwt-auth 1.1&#10;&#10;db update / reconfig init data" />
+    <option name="LAST_COMMIT_MESSAGE" value="part-10-jwt-auth 1.1&#10;&#10;db update / reconfig init data" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fastAPIHello$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1644199934042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part-01-hello-world/app" />
     <SUITE FILE_PATH="coverage/fastAPIHello$main.coverage" NAME="main Coverage Results" MODIFIED="1644032978458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/fastAPIHello$main__3_.coverage" NAME="main (3) Coverage Results" MODIFIED="1644201095438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part-03-query-parameters/app" />
-    <SUITE FILE_PATH="coverage/fastAPIHello$main__4_.coverage" NAME="main (4) Coverage Results" MODIFIED="1644247779608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ChristopherGS/app" />
+    <SUITE FILE_PATH="coverage/fastAPIHello$main__4_.coverage" NAME="main (4) Coverage Results" MODIFIED="1645309928079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ChristopherGS/app" />
     <SUITE FILE_PATH="coverage/fastAPIHello$backend_pre_start.coverage" NAME="backend_pre_start Coverage Results" MODIFIED="1644223250058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ChristopherGS/app" />
     <SUITE FILE_PATH="coverage/fastAPIHello$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1644200620678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/part-02-path-parameters/app" />
     <SUITE FILE_PATH="coverage/fastAPIHello$session.coverage" NAME="session Coverage Results" MODIFIED="1644229351173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ChristopherGS/app/db" />

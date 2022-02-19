@@ -5,7 +5,7 @@ import os
 
 class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
-    JWT_SECRET: str = ""
+    JWT_SECRET: str = "LongLooooongTime"
     ALGORITHM: str = "HS256"
 
     # 8 days lasts
