@@ -1,6 +1,12 @@
-## ImportError
+# Thanks to
+`ChristopherGS`
 
-### set PYTHONPATH env variable
+https://christophergs.com/
+
+## ImportError
+`importError, ModuleNotfoundError`
+
+### set `PYTHONPATH` env variable
 https://towardsdatascience.com/how-to-fix-modulenotfounderror-and-importerror-248ce5b69b1c
 
 ```shell
@@ -39,7 +45,7 @@ python ./app/initial_data.py
 
 https://stackoverflow.com/questions/29397002/creating-database-with-sqlalchemy-in-flask
 
-```python
+```python3
 db_path = os.path.join(os.path.dirname(__file__), 'app.db')
 db_uri = 'sqlite:///{}'.format(db_path)
 ```
