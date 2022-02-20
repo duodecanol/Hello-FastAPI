@@ -9,7 +9,12 @@ from app.core.auth import oauth2_scheme
 from app.core.config import settings
 from app.db.session import SessionLocal
 from app.models.user import User
+from app.clients.reddit import RedditClient
 
+# A central location where our dependencies are defined.
+
+def get_reddit_client() -> RedditClient:
+    return RedditClient()
 
 class TokenData(BaseModel):
     username: Optional[str] = None

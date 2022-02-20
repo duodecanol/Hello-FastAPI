@@ -16,4 +16,4 @@ class User(Base):
         back_populates="submitter",
         uselist=True,
     )
-    hashed_password = Column(String, nullable=False, default="1")
+    hashed_password = Column(String, nullable=False)  # New

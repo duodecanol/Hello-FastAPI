@@ -28,6 +28,11 @@ class UserInDBBase(UserBase):
         orm_mode = True
 
 
+# Additional properties stored in DB but not returned by API
+class UserInDB(UserInDBBase):
+    hashed_password: str
+
+
 # Additional properties to return via API
 class User(UserInDBBase):
-    pass
+    ...
