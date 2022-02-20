@@ -140,7 +140,10 @@ async def get_reddit_top_async(subreddit: str, data: dict) -> None:
 
 
 @router.get("/ideas/async")
-async def fetch_ideas_async() -> dict:
+async def fetch_ideas_async(
+        user: User = Depends(deps.get_current_active_superuser),
+) -> dict:
+    # Any attempt to call it from a user that is not a superuser will be rejected.
     data: dict = {}
 
     await asyncio.gather(

@@ -5,6 +5,7 @@ from jose import jwt, JWTError
 from pydantic import BaseModel
 from sqlalchemy.orm.session import Session
 
+from app import crud
 from app.core.auth import oauth2_scheme
 from app.core.config import settings
 from app.db.session import SessionLocal
@@ -12,9 +13,6 @@ from app.models.user import User
 from app.clients.reddit import RedditClient
 
 # A central location where our dependencies are defined.
-
-def get_reddit_client() -> RedditClient:
-    return RedditClient()
 
 class TokenData(BaseModel):
     username: Optional[str] = None
@@ -27,8 +25,11 @@ def get_db() -> Generator:
     finally:
         db.close()
 
+def get_reddit_client() -> RedditClient:
+    return RedditClient()
 
-def get_current_user(
+
+async def get_current_user(
         db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)
 ) -> User:
     credentials_exception = HTTPException(
@@ -54,3 +55,23 @@ def get_current_user(
     if user is None:
         raise credentials_exception
     return user
+
+
+def get_current_active_superuser(
+        current_user: User = Depends(get_current_user),
+) -> User:
+    """
+    We pass a dependency to this function (thereby creating a sub-dependency).
+    In this case it is the original `get_current_user` function.
+    This will make the current user instance available for use in the function.
+    Then we perform an additional check (using the data access utility `CRUDUser` class methods)
+    for whether the user is a superuser.
+    :param current_user:
+    :return:
+    """
+    if not crud.user.is_superuser(current_user):
+        raise HTTPException(
+            status_code=400, detail="The user doesn't have enough privileges"
+        )
+
+    return current_user
